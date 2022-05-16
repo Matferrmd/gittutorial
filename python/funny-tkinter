@@ -1,0 +1,19 @@
+from tkinter import*
+
+counter = 0
+def print_hello() :
+    global counter
+    counter+=1
+    hello_cnt.config(text="count: {} ".format(counter))
+
+window = Tk()
+window.title("matfer")
+
+hello_cnt = Label(window,text="count: ")
+hello_cnt.pack()
+
+Button(window,text="Click Me",command=print_hello).pack()
+
+window.geometry("400x400")
+
+window.mainloop()
